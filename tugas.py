@@ -19,5 +19,5 @@ print('5.Tampilkan Isi Array')
 print('6.Keluar')
 pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
 
-if pilihan == 1:
-    inputFunction()
+if pilihan == '1':
+    print("ok")
