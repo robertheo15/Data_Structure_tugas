@@ -32,12 +32,16 @@ while ans:
     if pilihan == '2':
         print('ok')
     if pilihan == '3':
-        if arr == '':
+        if arr == []:
             print('Silakan masukan bilangan terlebih dahulu.')
             arr = inputFunction()
             print(np.sort(arr))
         else:
-            print(np.sort(arr))
+            afterSort = np.sort(arr)
+            print(afterSort)
+    if pilihan == '5':
+        print("Sebelum Sort " + arr)
+        print("Setelah Sort " + afterSort)
     if pilihan == '6':
         ans = False
     else:
