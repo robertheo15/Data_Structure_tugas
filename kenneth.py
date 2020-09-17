@@ -1,7 +1,7 @@
 # Happy Coding -- Ken
 import numpy as np
 
-def inputfunction():
+def inputFunction():
     
     arr = np.array([])
     count = int(input("Jumlah Data Yang Ingin Di Input :"))
@@ -12,5 +12,5 @@ def inputfunction():
         arr = np.append(arr, inp)
     return arr
 
-arr = inputfunction()
+arr = inputFunction()
 print(arr)
