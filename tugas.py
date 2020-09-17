@@ -17,32 +17,33 @@ ans = True
 arr = ''
 while ans:
     print("""
-      Menu Pengurutan Bilangan
-      1.Masukkan Bilangan
-      2.Merubah Isi Array
-      3.Proses Pengurutan Bilangan
-      4.Menghapus Isi Array
-      5.Tampilkan Isi Array
-      6.Keluar
-      """)
+        Menu Pengurutan Bilangan
+        1.Masukkan Bilangan
+        2.Merubah Isi Array
+        3.Proses Pengurutan Bilangan
+        4.Menghapus Isi Array
+        5.Tampilkan Isi Array
+        6.Keluar
+    """)
     pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
 
     if pilihan == '1':
         arr = inputFunction()
-    if pilihan == '2':
+    elif pilihan == '2':
         print('ok')
-    if pilihan == '3':
-        if arr == []:
+    elif pilihan == '3':
+        arr = np.array([])
+        if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
             arr = inputFunction()
             print(np.sort(arr))
+            arr = np.sort(arr)
         else:
             afterSort = np.sort(arr)
             print(afterSort)
-    if pilihan == '5':
-        print("Sebelum Sort " + arr)
-        print("Setelah Sort " + afterSort)
-    if pilihan == '6':
+    elif pilihan == '5':
+        print(arr)
+    elif pilihan == '6':
         ans = False
     else:
         print("Pilihan salah !")
