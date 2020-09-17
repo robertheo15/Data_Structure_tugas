@@ -1,8 +1,0 @@
-print('Menu Pengurutan Bilangan')
-print('1.Masukkan Bilangan')
-print('2.Merubah Isi Array')
-print('3.Proses Pengurutan Bilangan')
-print('4.Menghapus Isi Array')
-print('5.Tampilkan Isi Array')
-print('6.Keluar')
-pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
