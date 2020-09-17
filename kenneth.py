@@ -8,7 +8,7 @@ def inputfunction():
 
     for x in range(count):
         print("Data Ke - ", x)
-        inp = input("Masukan input Ke - ")
+        inp = input("Masukan input: ")
         arr = np.append(arr, inp)
     return arr
 
