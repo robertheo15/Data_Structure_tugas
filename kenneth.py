@@ -2,13 +2,15 @@
 import numpy as np
 
 def inputfunction():
+    
     arr = np.array([])
-    x = 0
-    x = input("Banyak Data Yang Ingin Di Input : ")
+    count = int(input("Jumlah Data Yang Ingin Di Input :"))
 
-    while (conf == 'Y' or conf == 'y'):
-        inp = input("Masukan Input : ")
-        arr = np.append(arr,inp)
-        conf = input ("continue? Y/N : ")
+    for x in range(count):
+        print("Data Ke - ", x)
+        inp = input("Masukan input Ke - ")
+        arr = np.append(arr, inp)
+    return arr
 
-inputfunction()
+arr = inputfunction()
+print(arr)
