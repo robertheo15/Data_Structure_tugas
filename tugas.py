@@ -8,6 +8,7 @@ def inputFunction():
         inp = input("Masukan Input : ")
         arr = np.append(arr, inp)
         conf = input("continue? Y/N : ")
+    return arr
 
 
 print('Menu Pengurutan Bilangan')
@@ -19,5 +20,13 @@ print('5.Tampilkan Isi Array')
 print('6.Keluar')
 pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
 
+arr = ''
+
 if pilihan == '1':
-    print("ok")
+    arr = inputFunction()
+if pilihan == '2':
+    print('ok')
+if pilihan == '3':
+    if arr == '':
+        print('Silakan masukan bilangan terlebih dahulu.')
+        arr = inputFunction()
