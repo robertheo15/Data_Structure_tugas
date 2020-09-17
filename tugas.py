@@ -2,31 +2,43 @@ import numpy as np
 
 
 def inputFunction():
+
     arr = np.array([])
-    conf = 'Y'
-    while (conf == 'Y' or conf == 'y'):
-        inp = input("Masukan Input : ")
+    count = int(input("Jumlah Data Yang Ingin Di Input :"))
+
+    for x in range(count):
+        print("Data Ke - ", x)
+        inp = input("Masukan input: ")
         arr = np.append(arr, inp)
-        conf = input("continue? Y/N : ")
     return arr
 
 
-print('Menu Pengurutan Bilangan')
-print('1.Masukkan Bilangan')
-print('2.Merubah Isi Array')
-print('3.Proses Pengurutan Bilangan')
-print('4.Menghapus Isi Array')
-print('5.Tampilkan Isi Array')
-print('6.Keluar')
-pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
-
+ans = True
 arr = ''
+while ans:
+    print("""
+      Menu Pengurutan Bilangan
+      1.Masukkan Bilangan
+      2.Merubah Isi Array
+      3.Proses Pengurutan Bilangan
+      4.Menghapus Isi Array
+      5.Tampilkan Isi Array
+      6.Keluar
+      """)
+    pilihan = input("Pilih Menu (1, 2, 3, 4, 5, 6) ? ")
 
-if pilihan == '1':
-    arr = inputFunction()
-if pilihan == '2':
-    print('ok')
-if pilihan == '3':
-    if arr == '':
-        print('Silakan masukan bilangan terlebih dahulu.')
+    if pilihan == '1':
         arr = inputFunction()
+    if pilihan == '2':
+        print('ok')
+    if pilihan == '3':
+        if arr == '':
+            print('Silakan masukan bilangan terlebih dahulu.')
+            arr = inputFunction()
+            print(np.sort(arr))
+        else:
+            print(np.sort(arr))
+    if pilihan == '6':
+        ans = False
+    else:
+        print("Pilihan salah !")
