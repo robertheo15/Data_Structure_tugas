@@ -45,6 +45,11 @@ while ans:
             print(sortFunction(arr))
         else:
             print(sortFunction(arr))
+    elif pilihan == '4':
+        if arr.size == 0:
+            print('Array tidak ada isi!')
+        else:
+            print(arr)
     elif pilihan == '5':
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
