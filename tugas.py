@@ -17,6 +17,16 @@ def sortFunction(arr):
     sortResult = np.sort(arr)
     return sortResult
 
+def editFunction(arr):
+
+    x = 0
+    x = int(input("indeks : "))
+    print(arr[x])
+
+    arr[x] = input("masukkan data baru : ")
+    print(arr)
+    return arr
+
 
 ans = True
 arr = np.array([])
@@ -38,6 +48,8 @@ while ans:
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
             arr = inputFunction()
+        else:
+            editFunction(arr)
     elif pilihan == '3':
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
