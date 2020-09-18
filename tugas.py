@@ -13,8 +13,13 @@ def inputFunction():
     return arr
 
 
+def sortFunction(arr):
+    sortResult = np.sort(arr)
+    return sortResult
+
+
 ans = True
-arr = ''
+arr = np.array([])
 while ans:
     print("""
         Menu Pengurutan Bilangan
@@ -30,19 +35,23 @@ while ans:
     if pilihan == '1':
         arr = inputFunction()
     elif pilihan == '2':
-        print('ok')
-    elif pilihan == '3':
-        arr = np.array([])
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
             arr = inputFunction()
-            print(np.sort(arr))
-            arr = np.sort(arr)
+    elif pilihan == '3':
+        if arr.size == 0:
+            print('Silakan masukan bilangan terlebih dahulu.')
+            arr = inputFunction()
+            print(sortFunction(arr))
         else:
-            afterSort = np.sort(arr)
-            print(afterSort)
+            print(sortFunction(arr))
     elif pilihan == '5':
-        print(arr)
+        if arr.size == 0:
+            print('Silakan masukan bilangan terlebih dahulu.')
+            arr = inputFunction()
+            print(arr)
+        else:
+            print(arr)
     elif pilihan == '6':
         ans = False
     else:
