@@ -17,6 +17,7 @@ def sortFunction(arr):
     sortResult = np.sort(arr)
     return sortResult
 
+
 def editFunction(arr):
 
     x = 0
@@ -24,6 +25,14 @@ def editFunction(arr):
     print(arr[x])
 
     arr[x] = input("masukkan data baru : ")
+    print(arr)
+    return arr
+
+
+def eraseFunction(arr):
+
+    x = int(input("masukan Indeks yang ingin dihapus : "))
+    arr = np.delete(arr, x)
     print(arr)
     return arr
 
@@ -48,6 +57,7 @@ while ans:
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
             arr = inputFunction()
+            editFunction(arr)
         else:
             editFunction(arr)
     elif pilihan == '3':
@@ -60,8 +70,11 @@ while ans:
     elif pilihan == '4':
         if arr.size == 0:
             print('Array tidak ada isi!')
+            print('Silakan masukan bilangan terlebih dahulu.')
+            arr = inputFunction()
+            arr = eraseFunction(arr)
         else:
-            print(arr)
+            arr = eraseFunction(arr)
     elif pilihan == '5':
         if arr.size == 0:
             print('Silakan masukan bilangan terlebih dahulu.')
